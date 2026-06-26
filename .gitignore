@@ -7,6 +7,6 @@ coverage/
 .env.*
 !.env.example
 internal/
-.issue2dev/cache/
 spikes/phase-3-validation/reports/*
 !spikes/phase-3-validation/reports/.gitkeep
+.issue2dev/
