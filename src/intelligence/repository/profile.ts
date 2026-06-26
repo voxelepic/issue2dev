@@ -1,7 +1,7 @@
 import type { RepositoryProfile, StackDetection } from "../../core/domain/repository-context.js";
 import type { RepoSnapshot } from "../../core/domain/repository-snapshot.js";
 
-const LANGUAGE_EXTENSIONS = new Map([[".ts", "TypeScript"], [".tsx", "TypeScript"], [".js", "JavaScript"], [".jsx", "JavaScript"], [".py", "Python"], [".go", "Go"], [".rs", "Rust"]]);
+const LANGUAGE_EXTENSIONS = new Map([[".ts", "TypeScript"], [".tsx", "TypeScript"], [".js", "JavaScript"], [".jsx", "JavaScript"], [".py", "Python"], [".go", "Go"], [".rs", "Rust"], [".java", "Java"], [".rb", "Ruby"], [".php", "PHP"]]);
 function extensionOf(path: string): string { return path.match(/\.[^.\/]+$/u)?.[0] ?? ""; }
 function hasPath(repo: RepoSnapshot, predicate: (path: string) => boolean): boolean { return repo.files.some((file) => predicate(file.path.toLowerCase())); }
 
